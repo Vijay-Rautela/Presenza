@@ -89,7 +89,7 @@ RECORD_CONFIG = {
     "Students": {
         "columns": [
             ("id", "ID", 50),
-            ("roll_no", "Roll Number", 110),
+            ("roll_no", "rol no.", 110),
             ("name", "Student Name", 160),
             ("course", "Course", 110),
             ("semester", "Sem", 50),
@@ -99,7 +99,7 @@ RECORD_CONFIG = {
             ("is_active", "Active", 60),
         ],
         "fields": [
-            ("roll_no", "Roll Number"),
+            ("roll_no", "rol no."),
             ("name", "Full Name"),
             ("dob", "Date of Birth (YYYY-MM-DD)"),
             ("course_id", "Course Program"),
@@ -1528,7 +1528,7 @@ class AdminPortalView(ctk.CTkFrame):
         row.pack(fill="x", pady=(0, 16))
 
         for title, record_type, icon, desc, template_cols, color in (
-            ("Student Roster Ingest", "students", "⬢", "Batch register student accounts with roll numbers, names, DOB, and semester assignments.", "Required columns: roll_no, name, dob, course, semester, section, email", _THEME["primary"]),
+            ("Student Roster Ingest", "students", "⬢", "Batch register student accounts with rol no.s, names, DOB, and semester assignments.", "Required columns: roll_no, name, dob, course, semester, section, email", _THEME["primary"]),
             ("Faculty Personnel Ingest", "teachers", "⬡", "Batch register faculty members with employee IDs, departments, DOB, and emails.", "Required columns: emp_id, name, dob, department, email", _THEME["emerald"]),
         ):
             box = ctk.CTkFrame(row, fg_color=_THEME["card"], corner_radius=12, border_width=1, border_color=_THEME["card_border"])
